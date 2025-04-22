@@ -152,13 +152,11 @@
       <!-- Overview. -->
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Overview</h2>
+          <h2 class="title is-3">Background</h2>
           <div class="content">
             <p>
-              We first collect and filter high-quality Verilog modules
-              from open-source codebases. The modules are then sent to GPT-3.5 to request multi-level summaries.
-              Pairing high-level descriptions with corresponding modules, the high-quality dataset is utilized to
-              fine-tune base LLMs, yielding CodeV models.
+              Existing methods struggle with the complexity of over 15,000 configuration options in the Linux kernel, high evaluation costs, and potential errors that could cause OS boot failure, making automatic kernel optimization an unsolved problem. AutoOS first addresses this by leveraging expert knowledge within large language models (LLMs) to reduce the vast optimization space and detect errors that could prevent OS boot.
+              However, directly using LLMs for configuration is impractical. For instance, (a) a simple request to ChatGPT to modify configuration options can only list a small number of settings, and (b) default Linux configuration files from vendors only show enabled options, lacking comprehensive insight.
             </p>
           </div>
           <img src="./static/images/overview.png">
@@ -173,12 +171,12 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h2 class="title is-3"> Multi-level Code Summarization</h2>
+            <h2 class="title is-3"> Optimize OS kernel on a dynamic tree</h2>
             <p>
-              Manual annotation is prohibitively time-consuming and costly. Hence, we employed GPT-3.5 to generate high-level summaries for each Verilog module as its requirement description. As analyzed in VerilogEval, when required for summarising, LLMs often produce verbose descriptions, preferring line-by-line explanations over high-level summaries. To address this issue, we introduce a multi-level summarization method, employing few-shot learning to guide GPT-3.5 in first producing detailed descriptions and then abstracting high-level summaries.
+             AutoOS optimizes kernel configurations by modeling the problem as an optimization task on a dynamic tree structure (including directories and options), inspired by the directory layout of kernel configuration. It uses a state-machine-based traversal algorithm, which employs an observe-prune-propose-act-correct cycle to refine the optimization space. This method effectively narrows down the search space while ensuring successful OS boot by avoiding configurations that could lead to failures.
             </p>
             <p>
-              An actual example of the prompt for multi-level summarization. (a) The prompt provided to GPT-3.5. (b) An example of the demonstrations, with code, low-level descriptions, and high-level summaries. (c) Summaries responded from GPT-3.5 with and (d) without multi-level summarization.
+              An actual example of the optimization on the dynamic tree. (a) The AutoOS framework uses a state-machine-like prompt template with five stages to explore kernel configurations, optimize performance, and ensure successful OS boot-up. (b) An example of how the dynamic tree is traversed at a specific tree level to find optimal configurations.
             </p>
             <img src="./static/images/multilevel_sum_demo.png">
             </p>
