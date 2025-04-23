@@ -189,10 +189,10 @@
           <div class="content">
             <h2 class="title is-3"> Main Results </h2>
             <p>
-              We compares the main results of our CodeV with baseline methods on the VerilogEval and RTLLM benchmarks. We test CodeLlama, DeepSeek-Coder, and CodeQwen on RTLLM, while other baseline results are sourced from RTLCoder or BetterV paper. For a fair comparison, we also evaluate our models trained on comparable-size datasets against RTLCoder.
+              ​AutoOS was evaluated across three Linux distributions—PolyOS, Fedora, and Ubuntu—on two hardware platforms: a Hifive embedded development board (RISC-V architecture) and a PC with an Intel Core i7-13700F processor. The evaluation utilized UnixBench and LMbench benchmarks to assess performance improvements. 
             </p>
             <p>
-              Comparison of our CodeV models against various baseline models. Some data are missing due to the models being close-sourced and the data not being reported previously. The best results are highlighted in bold. In VerilogEval, CodeV outperforms all previous methods across all metrics, relatively surpassing previous open-source SOTA BetterV by 14.4% and GPT-4 by 22.1% on average. In RTLLM, CodeV relatively surpasses previous open-source SOTA RTLCoder by 11.3%.</p>
+              AutoOS outperforms both default configurations and LLM-Vanilla in AIoT scenarios, achieving performance improvements of up to 25.6% on Fedora and 8.4% on PolyOS. In the general-purpose scenario with Ubuntu, AutoOS achieves a 9.08% overall performance increase。
             <img src="./static/images/result1.png">
             </p>
           </div>
@@ -203,10 +203,9 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h2 class="title is-3"> LLM-generated Verilog code </h2>
+            <h2 class="title is-3"> Possibility of Achieving Positive Results </h2>
             <p>
-              We have collected existing LLMs of Verilog code and demonstrated their performance on VerilogEval and RTLLM in
-              <a href="https://iprc-dip.github.io/Chip-Design-LLM-Zoo/" target="_blank">Chip Design LLM Zoo</a>.
+              AutoOS demonstrates its robustness on Fedora, exploring legal configurations in all 56 search trials, with 26.78% of trials surpassing the default performance. It consistently finds optimized configurations, with the best performance achieved within 24 trials.
             </p>
           </div>
         </div>
@@ -243,15 +242,15 @@ print("Response:", response)
         <div class="container content is-max-desktop">
             <h2 class="title is-3"> BibTex </h2>
               <pre>
-  <code class="nohighlight" style="background-color: transparent; color: black; font-family: monospace;">@misc{zhao2024codevempoweringllmsverilog,
-    title={CodeV: Empowering LLMs for Verilog Generation through Multi-Level Summarization},
-    author={Yang Zhao and Di Huang and Chongxiao Li and Pengwei Jin and Ziyuan Nan and Tianyun Ma and Lei Qi and Yansong Pan and Zhenxing Zhang and Rui Zhang and Xishan Zhang and Zidong Du and Qi Guo and Xing Hu and Yunji Chen},
-    year={2024},
-    eprint={2407.10424},
-    archivePrefix={arXiv},
-    primaryClass={cs.PL},
-    url={https://arxiv.org/abs/2407.10424},
-  }</code>
+  <code class="nohighlight" style="background-color: transparent; color: black; font-family: monospace;">
+      @inproceedings{chen2024autoos,
+        title={AutoOS: Make Your OS More Powerful by Exploiting Large Language Models},
+        author={Huilai Chen and Yuanbo Wen and Limin Cheng and Shouxu Kuang and Yumeng Liu and Weijia Li and Ling Li and Rui Zhang and Xinkai Song and Wei Li and others},
+        year={2024},
+        booktitle={Proceedings of the 41st International Conference on Machine Learning (ICML)},
+        url={https://github.com/xuewuyinhe/AutoOS},
+      }
+  </code>
               </pre>
       </div>
       <!-- </section> -->
