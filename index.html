@@ -53,9 +53,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="margin-bottom: 20px;">
+            <h1 class="title is-1 publication-title">
                   AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
-              <div class="is-size-5 publication-authors" style="margin-top: 20px;">
+            </h1>
+              <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   <a>Huilai Chen</a><sup>1,2</sup>,</span>
                 <span class="author-block">
@@ -83,7 +84,7 @@
                 </span>
               </div>
 
-            <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+            <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>SKL of Processors, Institute of Computing Technology,
                 CAS</span><br>
               <span class="author-block"><sup>2</sup>University of Chinese Academy of Sciences</span><br>
@@ -208,8 +209,8 @@
             <h2 class="title is-3"> Possibility of Achieving Positive Results </h2>
             <p>
               AutoOS demonstrates its robustness on Fedora, exploring legal configurations in all 56 search trials, with 26.78% of trials surpassing the default performance. It consistently finds optimized configurations, with the best performance achieved within 24 trials.
-            <img src="./static/images/prob.jpg" style="width: 70%; height: auto;">
             </p>
+            <img src="./static/images/prob.jpg" style="width: 60%; height: auto;">
           </div>
         </div>
       </div>
@@ -277,7 +278,7 @@ menuconfig MODULES
 # run Autoos again
 python3 AutoOS.py
 
-# 7. Generate new config files using the command below,he newly generated configuration file is located at ./files/config
+# 7. Generate new config files using the command below,the newly generated configuration file is located at ./files/config
 python3 append.py
 
 # 8. Using the following command, load the newly generated ./files/config file, and then save it as ./.config in the current directory.
