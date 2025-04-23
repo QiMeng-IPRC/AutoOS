@@ -97,7 +97,7 @@
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>arXiv</span>
+                    <span>paper</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
@@ -217,19 +217,36 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Quick Start</h2>
           <pre style="width: 100%; overflow: auto; background: none;">
-          <code class="python" style="min-width: 100%; width: 0px; overflow: scroll; font-family: 'Cascadia Code', 'Menlo', 'Courier New', monospace;">
-from transformers import pipeline
-import torch
-prompt= "FILL IN THE QUESTION"
-generator = pipeline(
-  model="CODEV",
-  task="text-generation",
-  torch_dtype=torch.bfloat16,
-  device_map="auto",
-)
-result = generator(prompt , max_length=2048,num_return_sequences=1, temperature=0.0)
-response = result[0]["generated_text"]
-print("Response:", response)
+          <code class="bash" style="min-width: 100%; width: 0px; overflow: scroll; font-family: 'Cascadia Code', 'Menlo', 'Courier New', monospace;">
+# 1. 克隆 Linux 内核源代码仓库并进入目录
+git clone https://github.com/torvalds/linux.git
+cd linux
+
+# 2. 克隆 AutoOS 仓库并移动文件
+git clone https://github.com/xuewuyinhe/AutoOS.git
+mv AutoOS/* ./
+
+# 3. 复制并重命名配置文件
+cp .config .config_base
+
+# 4. 初始化环境变量
+echo "export srctree=." > init_env.sh
+echo "export CC=gcc" >> init_env.sh
+echo "export LD=ld" >> init_env.sh
+echo "export ARCH=x86" >> init_env.sh
+echo "export SRCARCH=x86" >> init_env.sh
+
+# 5. 设置架构名称（根据实际情况修改）
+ls arch/
+
+# 6. 输入 OpenAI API 密钥
+echo "your-openai-api-key" > key.txt
+
+# 7. 初始化环境
+source ./init_env.sh
+
+# 8. 运行 AutoOS
+python3 AutoOS.py
             </code>
           </pre>
         </div>
@@ -246,8 +263,7 @@ print("Response:", response)
       @inproceedings{chen2024autoos,
         title={AutoOS: Make Your OS More Powerful by Exploiting Large Language Models},
         author={Huilai Chen and Yuanbo Wen and Limin Cheng and Shouxu Kuang and Yumeng Liu and Weijia Li and Ling Li and Rui Zhang and Xinkai Song and Wei Li and others},
-        year={2024},
-        booktitle={Proceedings of the 41st International Conference on Machine Learning (ICML)},
+        booktitle={Forty-first International Conference on Machine Learning},
         url={https://github.com/xuewuyinhe/AutoOS},
       }
   </code>
