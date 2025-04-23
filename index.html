@@ -53,8 +53,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
-              <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title" style="margin-bottom: 20px;">
+                  AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
+              <div class="is-size-5 publication-authors" style="margin-bottom: 20px;">
                 <span class="author-block">
                   <a>Huilai Chen</a><sup>1,2</sup>,</span>
                 <span class="author-block">
@@ -82,7 +83,7 @@
                 </span>
               </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="margin-top: 10px;">
               <span class="author-block"><sup>1</sup>SKL of Processors, Institute of Computing Technology,
                 CAS</span><br>
               <span class="author-block"><sup>2</sup>University of Chinese Academy of Sciences</span><br>
@@ -248,7 +249,7 @@ source ./init_env.sh
 python3 AutoOS.py
 
 # When first run it, the error message will appear as follows:
-kconfiglib.KconfigError: kernel/module/Kconfig:4: error: couldn't parse 'modules': unrecognized construct
+"kconfiglib.KconfigError: kernel/module/Kconfig:4: error: couldn't parse 'modules': unrecognized construct"
 
 # To disable module functionality, delete the problematic code located under kernel/module/Kconfig (The place is according to the message). The code to remove is as follows:
 '''
