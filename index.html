@@ -154,14 +154,37 @@
       <!-- Overview. -->
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Background</h2>
+          <h2 class="title is-3">Overview</h2>
           <div class="content">
             <p>
-              Existing methods struggle with the complexity of over 15,000 configuration options in the Linux kernel, high evaluation costs, and potential errors that could cause OS boot failure, making automatic kernel optimization an unsolved problem. AutoOS first addresses this by leveraging expert knowledge within large language models (LLMs) to reduce the vast optimization space and detect errors that could prevent OS boot.
-              However, directly using LLMs for configuration is impractical. For instance, (a) a simple request to ChatGPT to modify configuration options can only list a small number of settings, and (b) default Linux configuration files from vendors only show enabled options, lacking comprehensive insight.
+              With the rapid development of Artificial Intelligence of Things (AIoT), customizing and optimizing operating system (OS) kernel configurations
+              for various AIoT application scenarios is crucial for maximizing system performance. However,
+              existing approaches falter due to the overwhelming problem complexity (i.e., over 15,000 configuration options in the Linux kernel), together with
+              the huge evaluation costs and error-prone options
+              that may result in OS boot-up failure, which all
+              make it an unresolved problem to optimize the
+              Linux kernel automatically. In this paper, we introduce AutoOS, a novel framework exploiting
+              Large Language Models for customizing and optimizing OS kernel configurations automatically
+              for various AIoT application scenarios. Inspired
+              by the inherently directory-structured kernel configuration process, we first formulate our research
+              problem as optimizing on a dynamic tree. We
+              then propose a novel framework integrating a state
+              machine-based traversal algorithm as the observeprune-propose-act-correct loop, which can effectively refine the optimization space and ensure
+              a successful OS boot-up. Experimental results
+              show that AutoOS can automatically customize
+              and optimize the OS kernel configurations without
+              human effort. More importantly, AutoOS even
+              achieves better performance by up to 25% than
+              vendor-provided configuration.  
+            </p>
+            <p>
+               <img src="./static/images/back.png" style="width: 70%; height: auto;">
+            </p>
+            <p>
+              An actual example of the optimization on the dynamic tree. (a) The AutoOS framework uses a state-machine-like prompt template with five stages to explore kernel configurations, optimize performance, and ensure successful OS boot-up. (b) An example of how the dynamic tree is traversed at a specific tree level to find optimal configurations.
             </p>
           </div>
-          <img src="./static/images/back.png" style="width: 70%; height: auto;">
+          
         </div>
       </div>
       <!--/ Overview. -->
