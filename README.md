@@ -1,10 +1,14 @@
-# AutoOS：Make Your OS More Powerful by Exploiting Large Language Models
-# Author：Huilai Chen、Yuanbo Wen、Limin Cheng、Shouxu Kuang、Yumeng Liu、Weijia Li、Ling Li、Rui Zhang、Xinkai Song、Wei Li、Qi Guo和Yunji Chen
-AutoOS is the first framework designed to optimize the Linux kernel configurations of specific OS distributions on certain hardware without human intervention using LLMs, primarily for AIoT scenarios.
+# **AutoOS**：Make Your OS More Powerful by Exploiting Large Language Models
 
-Our work has been published at ICML 2024. We welcome your attention.
+**Authors**: Huilai Chen, Yuanbo Wen, Limin Cheng, Shouxu Kuang, Yumeng Liu, Weijia Li, Ling Li, Rui Zhang, Xinkai Song, Wei Li, Qi Guo & Yunji Chen
 
-Don't forget to give a star if you like.
+---
+
+AutoOS is the **first framework** designed to optimize the Linux kernel configurations of specific OS distributions on certain hardware without human intervention using LLMs, primarily for AIoT scenarios.
+
+**Our work has been published at ICML 2024.** We welcome your attention.
+
+⭐ **Don't forget to give a star if you like.**
 
 ## Requirements
 - Linux kernel source code 
